@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { encodePayload, getBCAuth, setSession } from '../../lib/auth';
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
-    return { status: 200}
+
     try {
         // Authenticate the app on install
         const session = await getBCAuth(req.query);
